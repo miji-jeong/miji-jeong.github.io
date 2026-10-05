@@ -6,14 +6,14 @@
 /* --- Green menu bar -----------------------------------------------------
    The masthead normally reuses --global-bg-color, which makes it the same
    colour as the page. These variables give it its own colour instead.
-   Muted sage rather than a saturated green, so it stays comfortable to look
-   at on a page that is mostly text.                                       */
+   Muted eucalyptus rather than a saturated green, so it stays comfortable to
+   look at on a page that is mostly text.                                  */
 
 :root {
-  --masthead-bg-color          : #e4ede6;
-  --masthead-text-color        : #2f4a3c;
-  --masthead-link-hover-color  : #1f6b4a;
-  --masthead-border-color      : #c3d6c8;
+  --masthead-bg-color          : #d7e6da;
+  --masthead-text-color        : #24402f;
+  --masthead-link-hover-color  : #166b45;
+  --masthead-border-color      : #b6cebb;
 }
 
 html[data-theme="dark"] {
