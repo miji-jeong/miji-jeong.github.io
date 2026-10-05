@@ -1,9 +1,13 @@
-# Builds the site and publishes it to GitHub Pages.
+# Builds the site on every push, and publishes it only once GitHub Pages is on.
 #
-# This only has an effect once the site is made public:
-#   Settings -> Pages -> Build and deployment -> Source: "GitHub Actions"
-# Until then, nothing here is reachable by anyone else.
-name: Deploy to GitHub Pages
+# Before the site is made public, Pages is disabled, so the deploy step is
+# skipped and the run still passes - a red X here should mean the site is
+# actually broken.
+#
+# To publish: make the repository public, then set
+#   Settings -> Pages -> Build and deployment -> Source: "GitHub Actions".
+# The next push deploys automatically; no change to this file is needed.
+name: Build and deploy
 
 on:
   push:
@@ -15,7 +19,6 @@ permissions:
   pages: write
   id-token: write
 
-# Let one deployment finish rather than cancelling it mid-flight.
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -31,9 +34,8 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
-      - uses: actions/configure-pages@v5
-        id: pages
-
+      # No actions/configure-pages here: it fails outright when Pages is off,
+      # and _config.yml already sets the correct url and baseurl.
       - name: Build
         run: bundle exec jekyll build --strict_front_matter
         env:
@@ -48,5 +50,18 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Is Pages enabled?
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api "repos/$GITHUB_REPOSITORY/pages" >/dev/null 2>&1; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::GitHub Pages is not enabled, so nothing was published. The site built successfully."
+          fi
+
       - uses: actions/deploy-pages@v4
+        if: steps.check.outputs.enabled == 'true'
         id: deployment
