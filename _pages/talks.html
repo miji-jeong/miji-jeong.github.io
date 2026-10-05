@@ -20,26 +20,26 @@ author_profile: true
 {% assign years = spoken | group_by_exp: "t", "t.date | date: '%Y'" %}
 {% for year in years %}
   <h3>{{ year.name }}</h3>
-  {% for post in year.items %}
-    <div class="list__item">
-      <article class="archive__item">
-        <h4 class="archive__item-title">{{ post.title }}</h4>
-        <p class="archive__item-excerpt">{{ post.date | date: '%b' }} &middot; {{ post.type }}, {{ post.venue }}, {{ post.location }}</p>
-      </article>
-    </div>
-  {% endfor %}
+  <ul>
+    {% for post in year.items %}
+      <li>
+        <strong>{{ post.title }}</strong><br />
+        {{ post.date | date: '%b' }} &middot; {{ post.type }}, {{ post.venue }}, {{ post.location }}
+      </li>
+    {% endfor %}
+  </ul>
 {% endfor %}
 
 <h2>Posters</h2><hr />
 {% assign years = posters | group_by_exp: "t", "t.date | date: '%Y'" %}
 {% for year in years %}
   <h3>{{ year.name }}</h3>
-  {% for post in year.items %}
-    <div class="list__item">
-      <article class="archive__item">
-        <h4 class="archive__item-title">{{ post.title }}</h4>
-        <p class="archive__item-excerpt">{{ post.date | date: '%b' }} &middot; {{ post.venue }}, {{ post.location }}</p>
-      </article>
-    </div>
-  {% endfor %}
+  <ul>
+    {% for post in year.items %}
+      <li>
+        <strong>{{ post.title }}</strong><br />
+        {{ post.date | date: '%b' }} &middot; {{ post.venue }}, {{ post.location }}
+      </li>
+    {% endfor %}
+  </ul>
 {% endfor %}

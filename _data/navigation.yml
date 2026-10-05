@@ -17,5 +17,8 @@ main:
   - title: "CV"
     url: /cv/
 
+  - title: "Useful Links"
+    url: /links/
+
   - title: "Contact"
     url: /contact/
