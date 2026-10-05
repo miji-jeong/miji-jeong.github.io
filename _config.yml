@@ -37,7 +37,7 @@ author:
   googlescholar    : # TODO: https://scholar.google.com/citations?user=...
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : # TODO: https://orcid.org/0000-0000-0000-0000
+  orcid            : "https://orcid.org/0009-0009-7838-7771"
   semantic         : # URL
   ssrn             : # URL
   pubmed           :
@@ -83,10 +83,10 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  manuscripts:
-    title: 'Refereed Journal Articles'
-  conferences:
-    title: 'Conference Proceedings'
+  first-author:
+    title: 'First-author publications'
+  co-author:
+    title: 'Co-authored publications'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews

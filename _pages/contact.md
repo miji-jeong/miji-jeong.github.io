@@ -13,13 +13,11 @@ Email
 
 Address
 ======
-TODO: your office / building and room
 Korea Astronomy and Space Science Institute
-776 Daedeok-daero, Yuseong-gu
+Daedeokdae-ro 776, Yuseong-gu
 Daejeon 34055
 Republic of Korea
 
-Elsewhere
+ORCID
 ======
-Links to GitHub, ORCID, Google Scholar and other profiles appear in the sidebar
-once you fill in the matching fields in `_config.yml`.
+[0009-0009-7838-7771](https://orcid.org/0009-0009-7838-7771)

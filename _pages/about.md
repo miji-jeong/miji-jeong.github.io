@@ -32,6 +32,8 @@ You can find my papers on [Publications](/publications/), the talks I have given
 
 News
 ======
-<!-- Keep the most recent 4-5 items; delete the rest. -->
-* **TODO (Month Year)** — e.g. "New paper accepted in A&A."
-* **TODO (Month Year)** — e.g. "Gave a talk at the KAS Autumn Meeting."
+<!-- Keep the most recent few items and delete the rest as new ones arrive. -->
+* **Aug 2026** — Gave a colloquium at NOIRLab North in Hilo, *Chemical Fossils of the Milky Way: From GRACES to GHOST*.
+* **Jun 2026** — Our detailed *r*-process study of the actinide-boost star LAMOST J122216.85&minus;063345.2 is published in [ApJ](https://doi.org/10.3847/1538-4357/ae5b7d).
+* **2026** — Joined the Korea Time Allocation Committee for the K-GMT Science Program.
+* **Sep 2025** — Started as a postdoctoral researcher at the Korea Gemini Office, KASI.
