@@ -31,7 +31,7 @@ bundle exec jekyll serve --livereload
 | Research 페이지 | `_pages/research.md` |
 | CV 페이지 | `_pages/cv.md` |
 | Contact 페이지 | `_pages/contact.md` |
-| 프로필 사진 | `images/profile.png` 를 교체 |
+| 프로필 사진 | `images/profile.jpg` 를 교체 (정사각, 800px 정도로 줄여서) |
 | CV PDF | `files/cv.pdf` 로 저장 |
 | 색 테마 | `_config.yml` 의 `site_theme` — `default`, `air`, `sunrise`, `mint`, `dirt`, `contrast` |
 
