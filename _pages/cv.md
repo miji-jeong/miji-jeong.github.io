@@ -14,20 +14,28 @@ redirect_from:
 
 Education
 ======
-* TODO Ph.D. in Astronomy, University, Year
-* TODO M.S. in Astronomy, University, Year
-* TODO B.S. in Astronomy, University, Year
+* Ph.D. in Astronomy, Space Science and Geology, Chungnam National University, TODO year
+* TODO M.S. in ..., University, Year
+* TODO B.S. in ..., University, Year
 
 Positions
 ======
-* TODO Year–present: Postdoctoral Researcher
-  * Korea Gemini Office, Korea Astronomy and Space Science Institute
-  * TODO: one line on what you do there
+* 2025–present: Postdoctoral Researcher
+  * Korea Gemini Office (KGO), Korea Astronomy and Space Science Institute
+  * Support for Korean Gemini users: proposal preparation, observing setup and
+    strategy, and data-reduction guidance
+
+Research visits
+======
+* GHOST instrument team, Gemini South, TODO year(s)
+* University of Notre Dame, TODO year(s)
+* NSF NOIRLab, TODO year(s)
 
 Research interests
 ======
-* TODO interest 1
-* TODO interest 2
+* Metal-poor and chemically peculiar stars
+* High-resolution stellar spectroscopy and chemical-abundance analysis
+* Galactic archaeology, halo substructures and stellar dynamics
 
 Publications
 ======
