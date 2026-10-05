@@ -6,31 +6,35 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</div>
 {% endif %}
 
-{% include base_path %}
+{% comment %}
+  Laid out like the talks page: plain entries, no links to individual pages
+  (the collection has output: false).
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+  Numbering runs straight through both sections, so the co-authored list carries
+  on from where the first-author list stopped.
+{% endcomment %}
+
+{% assign counter = 0 %}
+
+{% for category in site.publication_category %}
+  {% assign entries = site.publications | where: "category", category[0] | sort: "date" | reverse %}
+  {% if entries.size > 0 %}
+    <h2>{{ category[1].title }}</h2><hr />
+    {% for post in entries %}
+      {% assign counter = counter | plus: 1 %}
+      <div class="list__item">
+        <article class="archive__item">
+          <h4 class="archive__item-title">[{{ counter }}] {{ post.title }}</h4>
+          <p class="page__meta">{{ post.date | date: '%Y' }}</p>
+          <p class="archive__item-excerpt">
+            {{ post.citation }}
+            {% if post.paperurl %}<br /><a href="{{ post.paperurl }}">Paper</a>{% endif %}
+          </p>
+        </article>
+      </div>
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+  {% endif %}
+{% endfor %}

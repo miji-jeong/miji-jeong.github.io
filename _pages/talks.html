@@ -6,17 +6,40 @@ author_profile: true
 ---
 
 {% comment %}
-  Rendered inline rather than through _includes/archive-single-talk.html so that
-  entries are plain text: the talks collection has output: false, so there are no
-  individual pages to link to.
+  Entries are plain text: the talks collection has output: false, so there are
+  no individual pages to link to.
+
+  Each section is grouped by year. Sorting newest first before grouping makes
+  group_by_exp emit the years in descending order too.
 {% endcomment %}
 
-{% for post in site.talks reversed %}
-  <div class="list__item">
-    <article class="archive__item">
-      <h2 class="archive__item-title">{{ post.title }}</h2>
-      <p class="page__meta">{{ post.date | date: '%B %Y' }}</p>
-      <p class="archive__item-excerpt">{{ post.type }}, {{ post.venue }}, {{ post.location }}</p>
-    </article>
-  </div>
+{% assign spoken  = site.talks | where_exp: "t", "t.type != 'Poster'" | sort: "date" | reverse %}
+{% assign posters = site.talks | where: "type", "Poster"             | sort: "date" | reverse %}
+
+<h2>Talks, colloquia and seminars</h2><hr />
+{% assign years = spoken | group_by_exp: "t", "t.date | date: '%Y'" %}
+{% for year in years %}
+  <h3>{{ year.name }}</h3>
+  {% for post in year.items %}
+    <div class="list__item">
+      <article class="archive__item">
+        <h4 class="archive__item-title">{{ post.title }}</h4>
+        <p class="archive__item-excerpt">{{ post.date | date: '%b' }} &middot; {{ post.type }}, {{ post.venue }}, {{ post.location }}</p>
+      </article>
+    </div>
+  {% endfor %}
+{% endfor %}
+
+<h2>Posters</h2><hr />
+{% assign years = posters | group_by_exp: "t", "t.date | date: '%Y'" %}
+{% for year in years %}
+  <h3>{{ year.name }}</h3>
+  {% for post in year.items %}
+    <div class="list__item">
+      <article class="archive__item">
+        <h4 class="archive__item-title">{{ post.title }}</h4>
+        <p class="archive__item-excerpt">{{ post.date | date: '%b' }} &middot; {{ post.venue }}, {{ post.location }}</p>
+      </article>
+    </div>
+  {% endfor %}
 {% endfor %}
