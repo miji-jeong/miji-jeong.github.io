@@ -7,8 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-I am a postdoctoral researcher at the **Korea Gemini Office (KGO)** at the
-[Korea Astronomy and Space Science Institute (KASI)](https://www.kasi.re.kr/eng/pageView/1)
+I am a postdoctoral researcher at the [**Korea Gemini Office
+(KGO)**](https://kgmt.kasi.re.kr/kgmtscience/) at the [Korea Astronomy and Space
+Science Institute (KASI)](https://www.kasi.re.kr/)
 in Daejeon, Republic of Korea. I support Korean [Gemini
 Observatory](https://www.gemini.edu/) users with proposal preparation, observing
 setup and strategy, and data-reduction guidance, while conducting my own research
