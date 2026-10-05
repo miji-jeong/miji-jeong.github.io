@@ -78,3 +78,87 @@ html[data-theme="dark"] {
     color: var(--masthead-text-color);
   }
 }
+
+/* --- Paged CV viewer ---------------------------------------------------- */
+
+.cv-viewer {
+  /* Narrower than the text column: a full-width page render is bigger than it
+     needs to be, and the pages stay legible at this size. */
+  max-width: 80%;
+  margin: 1.5em auto;
+
+  @media (max-width: 37.5em) {
+    max-width: 100%;
+  }
+
+  &__stage {
+    background: var(--global-bg-color);
+    border: 1px solid var(--masthead-border-color);
+    border-radius: 4px;
+    padding: 0.5em;
+    line-height: 0;              /* no stray gap under the canvas */
+  }
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #fff;            /* pages are white in either theme */
+  }
+
+  &__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75em;
+    margin-top: 0.75em;
+  }
+
+  &__btn {
+    background: var(--masthead-bg-color);
+    color: var(--masthead-text-color);
+    border: 1px solid var(--masthead-border-color);
+    border-radius: 4px;
+    padding: 0.4em 1em;
+    font-family: $sans-serif-narrow;
+    font-size: 0.8em;
+    cursor: pointer;
+
+    &:hover:not(:disabled),
+    &:focus-visible:not(:disabled) {
+      color: var(--masthead-link-hover-color);
+      border-color: var(--masthead-link-hover-color);
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+  }
+
+  &__count {
+    font-family: $sans-serif-narrow;
+    font-size: 0.8em;
+    color: var(--global-text-color-light);
+  }
+
+  &__hint {
+    margin-top: 0.4em;
+    font-size: 0.7em;
+    color: var(--global-text-color-light);
+  }
+}
+
+.cv-viewer__fallback {
+  font-size: 0.8em;
+  color: var(--global-text-color-light);
+}
+
+.cv-viewer__download {
+  max-width: 80%;
+  margin: 0.75em auto 0;
+
+  @media (max-width: 37.5em) {
+    max-width: 100%;
+  }
+}
