@@ -1,0 +1,43 @@
+---
+layout: archive
+title: "Outreach"
+permalink: /outreach/
+author_profile: true
+redirect_from:
+  - /teaching/
+---
+
+{% comment %}
+  Laid out like the talks page. The teaching collection has output: false, so
+  entries are plain text with nothing to link to.
+
+  An entry is filed by its `type`, so new entries sort themselves. The line
+  under each title gives the exact terms, which a single year heading cannot.
+{% endcomment %}
+
+{% assign sections = "Teaching assistant and invited lectures,Outreach,Mentorship" | split: "," %}
+
+{% for section in sections %}
+  {% if section == "Teaching assistant and invited lectures" %}
+    {% assign entries = site.teaching | where_exp: "t", "t.type == 'Invited lecture' or t.type == 'Teaching assistant'" | sort: "date" | reverse %}
+  {% else %}
+    {% assign entries = site.teaching | where: "type", section | sort: "date" | reverse %}
+  {% endif %}
+
+  {% if entries.size > 0 %}
+    <h2>{{ section }}</h2><hr />
+    {% assign years = entries | group_by_exp: "t", "t.date | date: '%Y'" %}
+    {% for year in years %}
+      <h3>{{ year.name }}</h3>
+      <ul>
+        {% for post in year.items %}
+          <li>
+            <strong>{{ post.title }}</strong><br />
+            {{ post.type }}, {{ post.venue }}, {{ post.location }}
+            {{ post.content }}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  {% endif %}
+{% endfor %}
