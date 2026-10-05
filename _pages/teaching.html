@@ -5,8 +5,18 @@ permalink: /teaching/
 author_profile: true
 ---
 
-{% include base_path %}
+{% comment %}
+  Rendered inline rather than through _includes/archive-single.html so that
+  entries are plain text: the teaching collection has output: false, so there are
+  no individual pages to link to.
+{% endcomment %}
 
 {% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+  <div class="list__item">
+    <article class="archive__item">
+      <h2 class="archive__item-title">{{ post.title }}</h2>
+      <p class="page__meta">{{ post.type }}, {{ post.venue }}, {{ post.location }}</p>
+      {{ post.content }}
+    </article>
+  </div>
 {% endfor %}

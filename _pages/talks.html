@@ -5,12 +5,18 @@ permalink: /talks/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
-
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
-
-{% endif %}
+{% comment %}
+  Rendered inline rather than through _includes/archive-single-talk.html so that
+  entries are plain text: the talks collection has output: false, so there are no
+  individual pages to link to.
+{% endcomment %}
 
 {% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
+  <div class="list__item">
+    <article class="archive__item">
+      <h2 class="archive__item-title">{{ post.title }}</h2>
+      <p class="page__meta">{{ post.date | date: '%B %Y' }}</p>
+      <p class="archive__item-excerpt">{{ post.type }}, {{ post.venue }}, {{ post.location }}</p>
+    </article>
+  </div>
 {% endfor %}

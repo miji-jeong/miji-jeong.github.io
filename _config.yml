@@ -27,7 +27,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "Postdoctoral Researcher, Korea Gemini Office"
   location         : "Daejeon, Republic of Korea"
-  employer         : "Korea Astronomy and Space Science Institute"
+  employer         : "KASI"
   uri              : # URL
   email            : "miji_jeong@kasi.re.kr"
 
@@ -219,8 +219,7 @@ kramdown:
 # These settings control the types of collections used by the template
 collections:
   teaching:
-    output: true
-    permalink: /:collection/:path/
+    output: false
   publications:
     output: true
     permalink: /:collection/:path/
@@ -228,8 +227,7 @@ collections:
     output: true
     permalink: /:collection/:path/
   talks:
-    output: true
-    permalink: /:collection/:path/
+    output: false
 
 
 # These settings control how pages and collections are included in the site
