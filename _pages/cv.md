@@ -20,8 +20,8 @@ Education
 
 Positions
 ======
-* TODO Year–present: Position
-  * Korea Astronomy and Space Science Institute
+* TODO Year–present: Postdoctoral Researcher
+  * Korea Gemini Office, Korea Astronomy and Space Science Institute
   * TODO: one line on what you do there
 
 Research interests

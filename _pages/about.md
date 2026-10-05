@@ -7,14 +7,16 @@ redirect_from:
   - /about.html
 ---
 
-<!-- TODO: replace the placeholder text below with your own. -->
+I am a Postdoctoral Researcher at the **Korea Gemini Office**, part of the
+[Korea Astronomy and Space Science Institute (KASI)](https://www.kasi.re.kr/eng)
+in Daejeon, Republic of Korea. The office supports the Korean community's use of
+the [Gemini Observatory](https://www.gemini.edu/), **TODO: add a line about what
+your role there involves**.
 
-I am a **TODO: your position** at the [Korea Astronomy and Space Science Institute
-(KASI)](https://www.kasi.re.kr/eng) in Daejeon, Republic of Korea.
-
-My research focuses on **TODO: one or two sentences describing what you work on** —
-for example the kinds of objects or data you study, the methods you use, and the
-question you are ultimately trying to answer.
+I study the formation and chemical evolution of the Milky Way through metal-poor
+and chemically peculiar stars. My research combines high-resolution spectroscopy,
+detailed chemical-abundance analysis, and stellar dynamics to trace early
+nucleosynthesis and the assembly history of Galactic halo populations.
 
 Before joining KASI I **TODO: previous position / degree, institution, year**.
 

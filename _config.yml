@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Miji Jeong"
 title_separator          : "-"
 name                     : &name "Miji Jeong"
-description              : &description "Astronomer at the Korea Astronomy and Space Science Institute (KASI)."
+description              : &description "Postdoctoral Researcher at the Korea Gemini Office, Korea Astronomy and Space Science Institute."
 url                      : "https://miji-jeong.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "miji-jeong/miji-jeong.github.io"
@@ -25,7 +25,7 @@ author:
   avatar           : "profile.png"
   name             : "Miji Jeong"
   pronouns         : # example: "she/her"  
-  bio              : "TODO: one-line bio for the sidebar"
+  bio              : "Postdoctoral Researcher, Korea Gemini Office"
   location         : "Daejeon, Republic of Korea"
   employer         : "Korea Astronomy and Space Science Institute"
   uri              : # URL

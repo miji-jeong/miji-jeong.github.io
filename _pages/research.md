@@ -7,21 +7,23 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- TODO: replace these with your actual research themes.
-     Add an image per theme with:
-     ![description](/images/your-figure.png)
-     and keep each section to a short paragraph or two. -->
+I study the formation and chemical evolution of the Milky Way through metal-poor
+and chemically peculiar stars, combining high-resolution spectroscopy, detailed
+chemical-abundance analysis, and stellar dynamics.
 
-Research theme 1
-======
-TODO: describe the first strand of your research. What is the open question,
-what data or models do you use, and what have you found so far?
+<!-- To illustrate a theme, drop a figure in images/ and add:
+     ![short description](/images/your-figure.png) -->
 
-Research theme 2
+Metal-poor and chemically peculiar stars
 ======
-TODO: describe the second strand.
+I use high-resolution spectroscopy to investigate the detailed chemical abundance
+patterns of metal-poor, *r*-process-enhanced, and other chemically peculiar stars.
+These stars preserve information about the nucleosynthetic events that enriched the
+early Galaxy, including rare enrichment channels such as the *r*-process.
 
-Software and data
+Galactic archaeology and halo substructures
 ======
-TODO: list any code or data products you maintain, with links to their
-repositories or archives. Delete this section if it does not apply.
+I combine stellar chemistry with kinematics and orbital information to study
+accreted halo populations and Galactic substructures. By connecting detailed
+abundance patterns with their likely progenitor systems, I aim to understand how
+different enrichment histories contributed to the assembly of the Milky Way halo.
