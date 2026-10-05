@@ -52,9 +52,6 @@ _teaching/YYYY-term-slug.md        → Teaching 페이지
 논문의 `category` 는 `manuscripts`(심사 논문) 또는 `conferences`(프로시딩).
 카테고리 이름은 `_config.yml` 의 `publication_category` 에서 바꿀 수 있음.
 
-BibTeX 나 TSV 로 논문이 많을 때는 `markdown_generator/` 의 스크립트로 한꺼번에
-마크다운을 만들 수 있음.
-
 ---
 
 ## 공개하기
